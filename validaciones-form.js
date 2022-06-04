@@ -16,6 +16,16 @@ else{
     document.querySelector("form #nombre").classList.remove("error");
 }
 
+if(form.querySelector("#apellido").value.length < 3){
+    errorFormulario = true;
+    document.querySelector("form .conteiner-apellido .text-error").innerHTML = "El apellido debe contener 3 o más caracteres";
+    document.querySelector("form #apellido").classList.add("error");
+}
+else{
+    document.querySelector("form .conteiner-apellido .text-error").innerHTML = "";
+    document.querySelector("form #apellido").classList.remove("error");
+}
+
 if(errorFormulario == false){
     form.submit();
 }
