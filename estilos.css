@@ -2,24 +2,105 @@
     box-sizing: border-box;
 }
 
+body{
+    background-color: rgb(89, 212, 249);
+    font-family: 'Franklin Gothic', 'Arial Narrow', Arial, sans-serif;
+}
+
+header{
+    position: fixed;
+    z-index: 1;
+    width: 100%;
+}
+
+.tittle{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-image: url(https://cdn.pixabay.com/photo/2015/11/19/08/47/banner-1050615_960_720.jpg);
+    background-size: cover;
+    height: 100px;
+    text-align: center;
+    color: rgb(4, 3, 79);
+    font-size: 35px;
+    font-weight: 600;
+}
+
 nav{
     display: flex;
     flex-direction: row;
-    justify-content: space-around;
+    justify-content: space-between;
+    padding: 2px;
+    background-color: rgb(16, 0, 78);
+    border-bottom: 2px solid rgb(6, 2, 46);
 }
 
-nav{
-    
+.icon-hamburguer{
+    width: 26px;
+    margin-left: 5px;
+}
+
+.frm-conteiner{
+    padding: 150px 0;
+}
+
+.form-registro{
+    display: flex;
+    flex-direction: column;
+    padding: 10px;
+    background-color: rgb(255, 255, 255);
+    margin: 10px;
+    border-radius: 4px;
+}
+
+form h2{
+    font-size: 30px;
+    font-weight: 600;
+    text-align: center;
+    padding: 5px 0 10px 0;
+    color: rgb(0, 157, 255);
+}
+
+.flex-column{
+    padding: 10px;
+}
+
+.conteiner-izquierda input{
+    width: 100%;
+    padding: 10px;
+    margin-top: 15px;
+    border: none;
+    border-bottom: 1px solid rgb(111, 255, 0);
+}
+
+.input-sexo{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 20px;
+}
+.input-sexo label, .input-temas label{
+    color: rgb(0, 64, 255);
+    font-size: 18px;
+}
+
+.conteiner-temas{
+    display: flex;
+    flex-direction: column;
 }
 
 
-h1{
-    font-size: 40px;
+
+label{
+    font-size: 20px;
+    font-weight: 200;
+    color: rgb(0, 157, 255);
 }
 
-a{
-    text-decoration: none;
-    color: black;
+
+
+.description{
+    display: none;
 }
 
 
@@ -29,6 +110,8 @@ input.error{
 
 .text-error{
     color: red;
+    padding-top: 5px;
+    font-family: monospace;
 }
 
 
@@ -44,25 +127,31 @@ input.error{
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
     background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
-  }
-  /* Modal Content/Box */
-  .modal-content {
+}
+/* Modal Content/Box */
+.modal-content {
     background-color: #fefefe;
     margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
     border: 1px solid #888;
     width: 80%; /* Could be more or less, depending on screen size */
-  }
-  /* The Close Button */
-  .close {
+}
+/* The Close Button */
+.close {
     color: #aaa;
     float: right;
     font-size: 28px;
     font-weight: bold;
-  }
-  .close:hover,
-  .close:focus {
+}
+.close:hover,
+.close:focus {
     color: black;
     text-decoration: none;
     cursor: pointer;
-  }
+}
+
+
+/*a{
+    text-decoration: none;
+    color: rgb(12, 2, 60);
+}*/
