@@ -1,3 +1,4 @@
+/* MOVIL */
 *{
     box-sizing: border-box;
 }
@@ -70,14 +71,12 @@ form h2{
     padding: 10px;
     margin-top: 15px;
     border: none;
-    border-bottom: 1px solid rgb(111, 255, 0);
+    border-bottom: 1px solid rgb(0, 89, 255);
 }
 
 .input-sexo{
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 20px;
+    flex-direction: column;
 }
 
 
@@ -97,9 +96,7 @@ label{
     font-size: 18px;
 }
 
-.input-temas div{
-    display: flex;
-    flex-direction: row;
+.input-temas div, .input-sexo div{
     padding: 10px 0 10px 0;
 }
 
@@ -125,7 +122,7 @@ textarea{
 }
 
 button{
-    padding: 10px;
+    padding: 15px;
     margin: 5px 10px 5px 10px;
     color: white;
     background-color: rgb(31, 63, 177);
@@ -135,7 +132,7 @@ button{
     cursor: pointer;
 }
 
-button:hover{
+button:hover, select:hover{
     background-color: rgb(70, 100, 211);
 }
 
@@ -164,10 +161,12 @@ input.error{
     color: red;
     padding-top: 5px;
     font-family: monospace;
+    font-size: 14px;
+    margin: 5px;
 }
 
 
-/* The Modal (background) */
+/* Modal (background) */
 .modal {
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
@@ -202,8 +201,79 @@ input.error{
     cursor: pointer;
 }
 
+@media only screen and (min-width: 768px){
+    .icon-hamburguer{
+        display: none;
+    }
 
-/*a{
-    text-decoration: none;
-    color: rgb(12, 2, 60);
-}*/
+    .nav-encabezado{
+        justify-content: space-around;
+        padding: 10px;
+    }
+    .description{
+        display: flex;
+        flex-direction: row;
+        color: white;
+    }
+    a{
+        text-decoration: none;
+        color: rgb(12, 2, 60);
+    }
+
+    .input-temas, .input-sexo{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+
+@media only screen and (min-width: 1024px){
+    .form-registro{
+        display: flex;
+        flex-direction: column;
+    }
+    .conteiner-izquierda{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-around;
+    }
+
+    .conteiner-derecha{
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        justify-content: space-around;
+    }
+
+    .flex-column{
+        display: flex;
+        flex-direction: column;
+        width: 48vw;
+    }
+
+    .row{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .input-sexo, .input-temas{
+        display: flex;
+        flex-direction: row;
+    }
+
+    .input-temas{
+        justify-content: space-between;
+    }
+
+    .input-sexo{
+        justify-content: space-around;
+    }
+
+    button{
+        margin: 10px;
+    }
+}
+

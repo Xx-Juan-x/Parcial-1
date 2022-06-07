@@ -28,6 +28,7 @@
     <div class="frm-conteiner">
         <form class="form-registro" id="frm-registro">
             <h2>Registro</h2>
+            <div class="row">
                 <div class="conteiner-izquierda">
                     <div class="conteiner-nombre flex-column">
                         <label for="nombre">Nombre</label>
@@ -54,12 +55,18 @@
                     <div class="conteiner-sexo flex-column">
                         <label for="sexo">Sexo</label>
                         <div class="input-sexo">
-                            <label>Mujer</label>
-                            <input type="radio" id="sexo" name="sexo" value="mujer">
-                            <label>Hombre</label>
-                            <input type="radio" id="sexo" name="sexo" value="hombre">
-                            <label>Otros</label>
-                            <input type="radio" id="sexo" name="sexo" value="otros">
+                            <div>
+                                <input type="radio" id="sexo" name="sexo" value="mujer">
+                                <label>Mujer</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="sexo" name="sexo" value="hombre">
+                                <label>Hombre</label>
+                            </div>
+                            <div>
+                                <input type="radio" id="sexo" name="sexo" value="otros">
+                                <label>Otros</label>
+                            </div>
                         </div>
                         <div class="text-error"></div>
                     </div>
@@ -87,7 +94,6 @@
                                 <label>Otros</label>
                             </div>
                         </div>
-
                         <div class="text-error"></div>
                     </div>
                     <div class="conteiner-pais flex-column">
@@ -107,6 +113,7 @@
                         <textarea name="comentario" cols="30" rows="10" placeholder="Comentario..."></textarea>
                     </div>
                 </div>
+            </div>
             <button type="submit">ENVIAR</button>
         </form>
     </div>
