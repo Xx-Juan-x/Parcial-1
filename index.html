@@ -66,16 +66,26 @@
                     <div class="conteiner-temas flex-column">
                         <label for="temas-interes">Temas de interés</label>
                         <div class="input-temas flex-column">
-                            <label>Música</label>
-                            <input type="checkbox" id="musica" name="temas[]" value="musica">
-                            <label>Deporte</label>
-                            <input type="checkbox" id="deporte" name="temas[]" value="deporte">
-                            <label>Juegos</label>
-                            <input type="checkbox" id="juegos" name="temas[]" value="juegos">
-                            <label>Tecnología</label>
-                            <input type="checkbox" id="tecnologia" name="temas[]" value="tecnologia">
-                            <label>Otros</label>
-                            <input type="checkbox" id="otros" name="temas[]" value="otros">
+                            <div>
+                                <input type="checkbox" id="musica" name="temas[]" value="musica">
+                                <label>Música</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="deporte" name="temas[]" value="deporte">
+                                <label>Deporte</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="juegos" name="temas[]" value="juegos">
+                                <label>Juegos</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="tecnologia" name="temas[]" value="tecnologia">
+                                <label>Tecnología</label>
+                            </div>
+                            <div>
+                                <input type="checkbox" id="otros" name="temas[]" value="otros">
+                                <label>Otros</label>
+                            </div>
                         </div>
 
                         <div class="text-error"></div>
@@ -93,15 +103,14 @@
                         <div class="text-error"></div>
                     </div>
                     <div class="conteiner-comentario flex-column">
-                        <label for="comentario">Comentarios:</label>
-                        <textarea name="comentario" cols="30" rows="10"></textarea>
+                        <label for="comentario">Comentarios</label>
+                        <textarea name="comentario" cols="30" rows="10" placeholder="Comentario..."></textarea>
                     </div>
                 </div>
             <button type="submit">ENVIAR</button>
         </form>
     </div>
     <footer>
-        <h2>LPPA</h2>
         <h4>Copiry Right: Todos los Derechos Reservados.</h4>
     </footer>
 

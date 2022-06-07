@@ -50,7 +50,7 @@ nav{
     padding: 10px;
     background-color: rgb(255, 255, 255);
     margin: 10px;
-    border-radius: 4px;
+    border-radius: 10px;
 }
 
 form h2{
@@ -79,17 +79,12 @@ form h2{
     justify-content: space-between;
     padding: 20px;
 }
-.input-sexo label, .input-temas label{
-    color: rgb(0, 64, 255);
-    font-size: 18px;
-}
 
-.conteiner-temas{
+
+.input-temas{
     display: flex;
     flex-direction: column;
 }
-
-
 
 label{
     font-size: 20px;
@@ -97,12 +92,69 @@ label{
     color: rgb(0, 157, 255);
 }
 
+.input-sexo label, .input-temas label{
+    color: rgb(0, 64, 255);
+    font-size: 18px;
+}
 
+.input-temas div{
+    display: flex;
+    flex-direction: row;
+    padding: 10px 0 10px 0;
+}
+
+.conteiner-pais{
+    display: flex;
+    flex-direction: column;
+}
+
+select{
+    padding: 5px;
+    margin-top: 10px;
+    background-color: rgb(94, 125, 240);
+    color: white;
+}
+
+.conteiner-comentario{
+    display: flex;
+    flex-direction: column;
+}
+
+textarea{
+    margin-top: 10px;
+}
+
+button{
+    padding: 10px;
+    margin: 5px 10px 5px 10px;
+    color: white;
+    background-color: rgb(31, 63, 177);
+    border: none;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+button:hover{
+    background-color: rgb(70, 100, 211);
+}
 
 .description{
     display: none;
 }
 
+
+footer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: rgb(16, 0, 78);
+    height: 50px;
+}
+
+h4{
+    color: white;
+}
 
 input.error{
     border: 1px solid red;
