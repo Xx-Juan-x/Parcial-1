@@ -1,19 +1,43 @@
-var form = document.getElementById("frm-registro");
+let form = document.getElementById("frm-registro");
 
+/*Validaciones*/
 form.addEventListener("submit",function(Event){
 
 Event.preventDefault();
 
-var errorFormulario = false;
-let mensaje_nombre = document.querySelector(".conteiner-nombre .text-error");
+//Bandera
+let errorFormulario = false;
+
+//Campo Nombre
 let nombre = document.querySelector("#nombre");
+let mensaje_nombre = document.querySelector(".conteiner-nombre .text-error");
+
+//Campo Apellido
+let apellido = document.querySelector("#apellido");
+let mensaje_apellido = document.querySelector(".conteiner-apellido .text-error");
+
+//Campo Email
+let email = document.querySelector("#email");
+let mensaje_email = document.querySelector(".conteiner-email .text-error");
+
+//Campo Edad
 let edad = document.querySelector("#edad");
 let mensaje_edad = document.querySelector(".conteiner-edad .text-error");
+
+//Campo Sexo
+let array_sexo = form.querySelectorAll("input[name='sexo']");
+let mensaje_sexo = document.querySelector(".conteiner-sexo .text-error");
+
+//Campo Temas
 let array_temas = document.querySelectorAll("input[type='checkbox']");
 let mensaje_temas = document.querySelector(".conteiner-temas .text-error");
+
+//Campo Paises
 let array_paises = document.querySelectorAll("#pais option");
 let mensaje_paises = document.querySelector(".conteiner-pais .text-error");
 let selector_paises = document.querySelector("#pais");
+
+//Modal
 let modal = document.getElementById("modalForm");
 let span_cierre = document.getElementsByClassName("close")[0];
 
@@ -29,25 +53,25 @@ else{
 }
 
 //Validacion apellido
-if(form.querySelector("#apellido").value.length < 3){
+if(apellido.value.length < 3){
     errorFormulario = true;
-    document.querySelector(".conteiner-apellido .text-error").innerHTML = "El apellido debe contener 3 o más caracteres";
-    document.querySelector("#apellido").classList.add("error");
+    mensaje_apellido.innerHTML = "El apellido debe contener 3 o más caracteres";
+    apellido.classList.add("error");
 }
 else{
-    document.querySelector(".conteiner-apellido .text-error").innerHTML = "";
-    document.querySelector("#apellido").classList.remove("error");
+    mensaje_apellido.innerHTML = "";
+    apellido.classList.remove("error");
 }
 
 //Validacion Email
 var regex = /[a-z0-9]+@[a-z]+\.[a-z]{2,3}/;
-if(!regex.test(document.querySelector("#email").value)){
+if(!regex.test(email.value)){
     errorFormulario = true;
-    document.querySelector(".conteiner-email .text-error").innerHTML = "El formato del email es incorrecto";
-    document.querySelector("#email").classList.add("error");
+    mensaje_email.innerHTML = "El formato del email es incorrecto";
+    email.classList.add("error");
 }else{
-    document.querySelector(".conteiner-email .text-error").innerHTML = "";
-    document.querySelector("#email").classList.remove("error");
+    mensaje_email.innerHTML = "";
+    email.classList.remove("error");
 }
 
 //validacion edad
@@ -73,7 +97,6 @@ else{
 
 //Validacion sexo
 let sexo_seleccionado = false;
-let array_sexo = form.querySelectorAll("input[name='sexo']");
 array_sexo.forEach(element => {
     if(element.checked == true){
         sexo_seleccionado = true;
@@ -82,9 +105,9 @@ array_sexo.forEach(element => {
 
 if(sexo_seleccionado == false){
     errorFormulario = true;
-    document.querySelector(".conteiner-sexo .text-error").innerHTML = "Debe elegir una opcion";
+    mensaje_sexo.innerHTML = "Debe elegir una opcion";
 }else{
-    document.querySelector(".conteiner-sexo .text-error").innerHTML = "";
+    mensaje_sexo.innerHTML = "";
 }
 
 //Validacion tema de interés
@@ -104,7 +127,6 @@ if(tema_seleccionado == false){
 
 
 //Validacion País
-
 let array_paises_permitido = ["arg","chi","br","uru"];
 let pais_selected = selector_paises.options[selector_paises.selectedIndex].value;
 
@@ -129,11 +151,11 @@ if(errorFormulario == false){
 //Cerrarlo tocando en la X
 span.onclick = function() {
     modal.style.display = "none";
-  }
+}
 
 //Cerrarlo tocando fuera del modal
 window.onclick = function(event) {
     if (event.target == modal) {
       modal.style.display = "none";
     }
-  }
+}
