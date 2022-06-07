@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title></title>
+    <title>Parcial 1 LPPA</title>
+    <link rel="stylesheet" href="reset.css">
     <link rel="stylesheet" href="estilos.css">
     <!--defer lo que hace es esperar a que termine de cargar el html para luego cargar el script-->
     <script src="./validaciones-form.js" defer></script>
@@ -12,7 +13,7 @@
 <body>
     <header class="container-encabezado">
         <div class="tittle">
-            <h1>Suscribete</h1>
+            <h1>Parcial 1 LPPA Amarillo Juan</h1>
         </div>
 
         <nav class="nav-encabezado">
@@ -20,12 +21,12 @@
             <a class="description" href="index.html">Inicio</a>
             <a class="description" href="#">Noticias</a>
             <a class="description" href="#">Más Info</a>
-            <a class="description" href="suscribete.html">Suscribirse</a>
         </nav>
     </header>
 
     <div class="frm-conteiner">
         <form id="frm-registro">
+            <h2>Registro</h2>
                 <div class="conteiner-izquierda">
                     <div class="conteiner-nombre flex-column">
                         <label for="nombre">NOMBRE</label>
@@ -44,25 +45,33 @@
                     </div>
                     <div class="conteiner-edad flex-column">
                         <label for="edad">EDAD</label>
-                        <input type="number" name="edad" id="edad" placeholder="Edad">
+                        <input type="text" name="edad" id="edad" placeholder="Edad">
                         <div class="text-error"></div>
                     </div>
                 </div>
                 <div class="conteiner-derecha">
                     <div class="conteiner-sexo flex-column">
                         <label for="sexo">SEXO</label>
-                        <input type="radio" id="mujer" name="sexo" value="mujer">
-                        <input type="radio" id="hombre" name="sexo" value="hombre">
-                        <input type="radio" id="otros" name="sexo" value="otros">
+                        <input type="radio" id="sexo" name="sexo" value="mujer">
+                        <input type="radio" id="sexo" name="sexo" value="hombre">
+                        <input type="radio" id="sexo" name="sexo" value="otros">
                         <div class="text-error"></div>
                     </div>
                     <div class="conteiner-temas flex-column">
                         <label for="temas-interes">Temas de interés</label>
-                        <input type="checkbox" id="musica" name="musica">
-                        <input type="checkbox" id="deporte" name="deporte">
-                        <input type="checkbox" id="juegos" name="juegos">
-                        <input type="checkbox" id="tecnologia" name="tecnologia">
-                        <input type="checkbox" id="otros" name="otros">
+                        <div class="input-temas">
+                            <label>Música</label>
+                            <input type="checkbox" id="musica" name="temas[]" value="musica">
+                            <label>Deporte</label>
+                            <input type="checkbox" id="deporte" name="temas[]" value="deporte">
+                            <label>Juegos</label>
+                            <input type="checkbox" id="juegos" name="temas[]" value="juegos">
+                            <label>Tecnología</label>
+                            <input type="checkbox" id="tecnologia" name="temas[]" value="tecnologia">
+                            <label>Otros</label>
+                            <input type="checkbox" id="otros" name="temas[]" value="otros">
+                        </div>
+
                         <div class="text-error"></div>
                     </div>
                     <div class="conteiner-pais flex-column">
@@ -74,8 +83,8 @@
                             <option value="chi">Chile</option>
                             <option value="br">Brasil</option>
                             <option value="uru">Uruguay</option>
-                            <div class="text-error"></div>
                         </select>
+                        <div class="text-error"></div>
                     </div>
                     <div class="conteiner-comentario flex-column">
                         <label for="comentario">Comentarios:</label>
@@ -86,9 +95,11 @@
         </form>
     </div>
     <footer>
-        <h2>SPACE</h2>
+        <h2>LPPA</h2>
         <h4>Copiry Right: Todos los Derechos Reservados.</h4>
     </footer>
+
+
 
 </body>
 </html>
