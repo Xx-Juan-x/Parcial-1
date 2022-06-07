@@ -124,16 +124,3 @@ if(errorFormulario == false){
 }
 
 });
-
-
-//Cerrarlo tocando en la X
-span.onclick = function() {
-    modal.style.display = "none";
-  }
-
-//Cerrarlo tocando fuera del modal
-window.onclick = function(event) {
-    if (event.target == modal) {
-      modal.style.display = "none";
-    }
-  }
