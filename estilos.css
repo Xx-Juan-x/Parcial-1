@@ -72,6 +72,7 @@ form h2{
     margin-top: 15px;
     border: none;
     border-bottom: 1px solid rgb(0, 89, 255);
+    outline: none;
 }
 
 .input-sexo{
@@ -154,7 +155,7 @@ h4{
 }
 
 input.error{
-    border: 1px solid red;
+    border-bottom: 1px solid red;
 }
 
 .text-error{
@@ -167,7 +168,7 @@ input.error{
 
 
 /* Modal (background) */
-.modal {
+.modal{
     display: none; /* Hidden by default */
     position: fixed; /* Stay in place */
     z-index: 1; /* Sit on top */

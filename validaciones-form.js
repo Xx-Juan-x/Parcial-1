@@ -39,7 +39,7 @@ let selector_paises = document.querySelector("#pais");
 
 //Modal
 let modal = document.getElementById("modalForm");
-let span_cierre = document.getElementsByClassName("close")[0];
+let span_cierre = document.getElementsByClassName("close");
 
 //Validacion nombre
 if(nombre.value.length < 3){
@@ -125,7 +125,6 @@ if(tema_seleccionado == false){
     mensaje_temas.innerHTML = "";
 }
 
-
 //Validacion País
 let array_paises_permitido = ["arg","chi","br","uru"];
 let pais_selected = selector_paises.options[selector_paises.selectedIndex].value;
@@ -145,17 +144,15 @@ if(errorFormulario == false){
     modal.style.display = "block";
 }
 
-});
-
-
 //Cerrarlo tocando en la X
-span.onclick = function() {
-    modal.style.display = "none";
+span_cierre.onclick = function(){
+        modal.style.display = "none";
 }
 
 //Cerrarlo tocando fuera del modal
-window.onclick = function(event) {
+window.onclick = function(event){
     if (event.target == modal) {
       modal.style.display = "none";
     }
 }
+});
