@@ -33,13 +33,12 @@ let array_temas = document.querySelectorAll("input[type='checkbox']");
 let mensaje_temas = document.querySelector(".conteiner-temas .text-error");
 
 //Campo Paises
-let array_paises = document.querySelectorAll("#pais option");
 let mensaje_paises = document.querySelector(".conteiner-pais .text-error");
 let selector_paises = document.querySelector("#pais");
 
 //Modal
 let modal = document.getElementById("modalForm");
-let span_cierre = document.getElementsByClassName("close");
+let span_cierre = document.querySelector(".close");
 
 //Validacion nombre
 if(nombre.value.length < 3){
@@ -80,6 +79,7 @@ if(edad.value == ""){
     mensaje_edad.innerHTML = "Debe completar la edad";
     edad.classList.add("error");
 }
+
 else if(!Number.isInteger(Number(edad.value))){
     errorFormulario = true;
     mensaje_edad.innerHTML = "Debe ingresar un número";
@@ -132,21 +132,18 @@ let pais_selected = selector_paises.options[selector_paises.selectedIndex].value
 if(!array_paises_permitido.includes(pais_selected)){
     errorFormulario = true;
     mensaje_paises.innerHTML = "Debe elegir un pais";
-
 }
 else{
     mensaje_paises.innerHTML = "";
 }
 
-
 if(errorFormulario == false){
-    //form.submit();
     modal.style.display = "block";
 }
 
 //Cerrarlo tocando en la X
 span_cierre.onclick = function(){
-        modal.style.display = "none";
+    modal.style.display = "none";
 }
 
 //Cerrarlo tocando fuera del modal
