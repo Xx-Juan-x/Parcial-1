@@ -1,1 +1,1 @@
-Github Page: 
+Github Page: https://xx-juan-x.github.io/Parcial-1/
